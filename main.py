@@ -103,7 +103,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
 
     merge_2 =  tf.add(merge1_upscale,conv_1x1_layer3)
 
-   output = tf.layers.conv2d_transpose(merge2,
+   output = tf.layers.conv2d_transpose(merge_2,
                                         num_classes, 16,
                                         strides=(8, 8),
                                         padding='same',
